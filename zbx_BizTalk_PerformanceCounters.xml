@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>6.2</version>
+    <date>2023-01-05T09:36:24Z</date>
+    <template_groups>
+        <template_group>
+            <uuid>7df96b18c230490a9a0a9e2307226338</uuid>
+            <name>Templates</name>
+        </template_group>
+        <template_group>
+            <uuid>97178e695e264821a9559e0816d6d808</uuid>
+            <name>Templates/Biztalk</name>
+        </template_group>
+    </template_groups>
+    <templates>
+        <template>
+            <uuid>c8d43a46f73d403a861e384db050a702</uuid>
+            <template>Template App BizTalk Performance Counters EXP</template>
+            <name>Template App BizTalk Performance Counters EXP</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+                <group>
+                    <name>Templates/Biztalk</name>
+                </group>
+            </groups>
+            <discovery_rules>
+                <discovery_rule>
+                    <uuid>d250355403134322bf46fe241e431a70</uuid>
+                    <name>BizTalk File Receive Adapter</name>
+                    <key>perf_instance.discovery[BizTalk:FILE Receive Adapter]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>3a511e569579482a8e9a992485825548</uuid>
+                            <name>{#INSTANCE} - Bytes received</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Receive Adapter({#INSTANCE})\Bytes received&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>afe3ad4ac7cd4406bbe9204e8b3cb899</uuid>
+                            <name>{#INSTANCE} - Bytes received/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Receive Adapter({#INSTANCE})\Bytes received/sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>3798a9e1ae0e42adba3e599e27890036</uuid>
+                            <name>{#INSTANCE} - Delete retries</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Receive Adapter({#INSTANCE})\Delete retries&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>6a2ad33e432147de8428c2e19e4f6ae0</uuid>
+                            <name>{#INSTANCE} - Lock failures</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Receive Adapter({#INSTANCE})\Lock failures&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>c25a0d50e4994dbe993ba3de3cdfe1f7</uuid>
+                            <name>{#INSTANCE} - Lock failures/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Receive Adapter({#INSTANCE})\Lock failures/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>3df0129ffcb94abe95f17a9641755b50</uuid>
+                            <name>{#INSTANCE} - Messages Received</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Receive Adapter({#INSTANCE})\Messages Received&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>9a1eca39a2f546a1ac4aad02010c0e79</uuid>
+                            <name>{#INSTANCE} - Messages Received/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Receive Adapter({#INSTANCE})\Messages Received/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>b0b07a1721f94df5998233162cc16c91</uuid>
+                            <name>{#INSTANCE} - Time to build batch</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Receive Adapter({#INSTANCE})\Time to build batch&quot;]</key>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>a5d50d074cc54296ae7af2393d70995b</uuid>
+                    <name>BizTalk File Send Adapter</name>
+                    <key>perf_instance.discovery[BizTalk:FILE Send Adapter]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>f56607ea0ac0473899b2b0edb8317ae8</uuid>
+                            <name>{#INSTANCE} - Bytes Sent</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Send Adapter({#INSTANCE})\Bytes Sent&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>94f886ecdeab4aa296daf9190bded46c</uuid>
+                            <name>{#INSTANCE} - Bytes Sent/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Send Adapter({#INSTANCE})\Bytes Sent/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>e6307d12621f4ef39490e5e1bab08f55</uuid>
+                            <name>{#INSTANCE} - Messages Sent</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Send Adapter({#INSTANCE})\Messages Sent&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>5d774f5eacf34b42aa1af13eef704855</uuid>
+                            <name>{#INSTANCE} - Messages Sent/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:FILE Send Adapter({#INSTANCE})\Messages Sent/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>aabb35ab0f5041d481e8fc1c86d340a3</uuid>
+                    <name>BizTalk Message Agent</name>
+                    <key>perf_instance.discovery[BizTalk:Message Agent]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>0dac7eeece054df987e8f0ecd83e8430</uuid>
+                            <name>{#INSTANCE} - Active instance count</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Active instance count&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>c0b4668bade647429843b8fad51cc790</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Active instance count&quot;])&gt;{$ACTIVE.INSTANCE.COUNT.CRIT:&quot;{#INSTANCE}&quot;}</expression>
+                                    <name>{#INSTANCE} - Active instance count</name>
+                                    <priority>DISASTER</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>8f1b35e392ae464a9b73e00b1c40879e</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Active instance count&quot;])&gt;{$ACTIVE.INSTANCE.COUNT.HIGH:&quot;{#INSTANCE}&quot;}</expression>
+                                    <name>{#INSTANCE} - Active instance count</name>
+                                    <priority>HIGH</priority>
+                                    <dependencies>
+                                        <dependency>
+                                            <name>{#INSTANCE} - Active instance count</name>
+                                            <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Active instance count&quot;])&gt;{$ACTIVE.INSTANCE.COUNT.CRIT:&quot;{#INSTANCE}&quot;}</expression>
+                                        </dependency>
+                                    </dependencies>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>4f5a9ef4489948a09c287209e3696cb0</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Active instance count&quot;])&gt;{$ACTIVE.INSTANCE.COUNT.WARN:&quot;{#INSTANCE}&quot;}</expression>
+                                    <name>{#INSTANCE} - Active instance count</name>
+                                    <priority>WARNING</priority>
+                                    <dependencies>
+                                        <dependency>
+                                            <name>{#INSTANCE} - Active instance count</name>
+                                            <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Active instance count&quot;])&gt;{$ACTIVE.INSTANCE.COUNT.HIGH:&quot;{#INSTANCE}&quot;}</expression>
+                                        </dependency>
+                                    </dependencies>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>cf444c126d104a88a3478111d6f9ac5d</uuid>
+                            <name>{#INSTANCE} - Database session</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Database session&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>42ed412a1b694671965a62f946b9515c</uuid>
+                            <name>{#INSTANCE} - Database session threshold</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Database session threshold&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>79683eb17b914b3e888bb904f38c6969</uuid>
+                            <name>{#INSTANCE} - Database size</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Database size&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>fc3c198ddede4118bd4ba874fd9adf6e</uuid>
+                            <name>{#INSTANCE} - High database session</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High database session&quot;]</key>
+                            <valuemap>
+                                <name>High database session</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>e0f3daf9e5484225bc660110f6138edf</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High database session&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - High database session</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>26dc44cb0d0d433fbc20257473163525</uuid>
+                            <name>{#INSTANCE} - High database size</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High database size&quot;]</key>
+                            <valuemap>
+                                <name>High database size</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>6f0f024a85de40dcba33190fd7304611</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High database size&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - High database size</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>de1a0523eb454102aaea642c6cf920e6</uuid>
+                            <name>{#INSTANCE} - High in-process message count</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High in-process message count&quot;]</key>
+                            <valuemap>
+                                <name>High in-process message count</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>0fbad8e9b9354521bc6c0c7c4b2f53a2</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High in-process message count&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - High in-process message count</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>e79502ddf4ee43758509246dcbc43cd8</uuid>
+                            <name>{#INSTANCE} - High message delivery rate</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High message delivery rate&quot;]</key>
+                            <valuemap>
+                                <name>High message delivery rate</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>1bc83bbf3b5841a5b0c47da824c99054</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High message delivery rate&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - High message delivery rate</name>
+                                    <priority>WARNING</priority>
+                                    <tags>
+                                        <tag>
+                                            <tag>BizTalk Message</tag>
+                                            <value>Rate</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>573a1b5cc71f4da8823b556839528580</uuid>
+                            <name>{#INSTANCE} - High message publishing rate</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High message publishing rate&quot;]</key>
+                            <valuemap>
+                                <name>High message publishing rate</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>5a27d0482d024a469d7282867544b419</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High message publishing rate&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - High message publishing rate</name>
+                                    <priority>WARNING</priority>
+                                    <tags>
+                                        <tag>
+                                            <tag>BizTalk Message</tag>
+                                            <value>Rate</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>56eb88c1e25e4b288d10abdf9aa2beed</uuid>
+                            <name>{#INSTANCE} - High process memory</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High process memory&quot;]</key>
+                            <valuemap>
+                                <name>High process memory</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>307f8947c3f840f3afcdd5d7a0803233</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High process memory&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - High process memory</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>5a73439f0a81495082b0f7f69045eea9</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High process memory&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - Process memory exceeds threshold</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>842fd58b12744f7d9820918f1cbd509e</uuid>
+                            <name>{#INSTANCE} - High system memory</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High system memory&quot;]</key>
+                            <valuemap>
+                                <name>High system memory</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>a8b265b14a3f41c1874095db407e3130</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High system memory&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - High system memory</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>78ae5d6b358344b892a848dc8f006a28</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High system memory&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - System memory exceeds threshold</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>2a010f7c4a284db0b3f78882112d7d66</uuid>
+                            <name>{#INSTANCE} - High thread count</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High thread count&quot;]</key>
+                            <valuemap>
+                                <name>High thread count</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>21c94734965549cc92f4d954db4d4e57</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\High thread count&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - High thread count</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>123f27c4b1c74b69b5bce3f44bc30efd</uuid>
+                            <name>{#INSTANCE} - In-process message count</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\In-process message count&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>fd0554b1cce4464bb5807934bae4d2b1</uuid>
+                            <name>{#INSTANCE} - In-process message count threshold</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\In-process message count threshold&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>9c887fe1e85f49a49b832096063763a5</uuid>
+                            <name>{#INSTANCE} - Message delivery delay</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery delay (ms)&quot;]</key>
+                            <units>ms</units>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>15e8f593abba4b85968ebe7d072f6fce</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery delay (ms)&quot;])&gt;{$MSG.DELIV.DELAY.WARN}</expression>
+                                    <name>{#INSTANCE} - Message delivery delay</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>4fa7fbb2cbe7493cad02a32989dcb423</uuid>
+                            <name>{#INSTANCE} - Message delivery incoming rate</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery incoming rate&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>be9e9ad01d91478086b1fc1f57133833</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery incoming rate&quot;])&gt;{$MSG.DELIV.IN.RATE.WARN}</expression>
+                                    <name>{#INSTANCE} - Message delivery incoming rate</name>
+                                    <priority>WARNING</priority>
+                                    <tags>
+                                        <tag>
+                                            <tag>BizTalk Message</tag>
+                                            <value>Rate</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>01843fc549e647a1ab61fc497a00a2a1</uuid>
+                            <name>{#INSTANCE} - Message delivery outgoing rate</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery outgoing rate&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>59a57005ba444f21a2619fe46547ccbc</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery outgoing rate&quot;])&gt;{$MSG.DELIV.OUT.RATE.WARN}</expression>
+                                    <name>{#INSTANCE} - Message delivery outgoing rate</name>
+                                    <priority>WARNING</priority>
+                                    <tags>
+                                        <tag>
+                                            <tag>BizTalk Message</tag>
+                                            <value>Rate</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>a11df40983ba40f8b413ec7041323cd7</uuid>
+                            <name>{#INSTANCE} - Message delivery throttling state</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery throttling state&quot;]</key>
+                            <valuemap>
+                                <name>Message delivery throttling state</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>fa0138d443884cf88febd118dc8ae91f</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery throttling state&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - Message delivery throttling state</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>7e1c5feaa81049d7932a3632500a3a3d</uuid>
+                                    <expression>min(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery throttling state&quot;],15m)&gt;0</expression>
+                                    <name>{#INSTANCE} - Message delivery throttling state for over 15 minutes</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>9cb254e19edd42b7888e662481dd164f</uuid>
+                            <name>{#INSTANCE} - Message delivery throttling state duration</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery throttling state duration&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>c7d3d5366381440db7a555623ccdfd38</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery throttling state duration&quot;])&gt;{$MSG.DELIV.THROTTLING.TIME.WARN}</expression>
+                                    <name>{#INSTANCE} - Message delivery throttling state duration</name>
+                                    <status>DISABLED</status>
+                                    <discover>NO_DISCOVER</discover>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>7e49c6b687e149a7a9f78b71a554ca7f</uuid>
+                            <name>{#INSTANCE} - Message delivery throttling state user override</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message delivery throttling state user override&quot;]</key>
+                            <status>DISABLED</status>
+                            <valuemap>
+                                <name>Message delivery throttling user override</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>d228ad1f13e74ff78d06eee38aefcecc</uuid>
+                            <name>{#INSTANCE} - Message publishing delay</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing delay (ms)&quot;]</key>
+                            <units>ms</units>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>906bded522f94ce0815114ca9b99698f</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing delay (ms)&quot;])&gt;{$MSG.PUBLISH.DELAY.WARN}</expression>
+                                    <name>{#INSTANCE} - Message publishing delay</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>832329287d7f49d3874204de18b1ec22</uuid>
+                            <name>{#INSTANCE} - Message publishing incoming rate</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing incoming rate&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>41af6a6b7b2f42338b1497e98f3fa2ed</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing incoming rate&quot;])&gt;{$MSG.PUBLISH.IN.RATE.WARN}</expression>
+                                    <name>{#INSTANCE} - Message publishing incoming rate</name>
+                                    <priority>WARNING</priority>
+                                    <tags>
+                                        <tag>
+                                            <tag>BizTalk Message</tag>
+                                            <value>Rate</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>1e352d1fed9a4f599fc650f59938816e</uuid>
+                            <name>{#INSTANCE} - Message publishing outgoing rate</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing outgoing rate&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>5eb23d774ca1435985b5972e7b3e0a9b</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing outgoing rate&quot;])&gt;{$MSG.PUBLISH.OUT.RATE.WARN}</expression>
+                                    <name>{#INSTANCE} - Message publishing outgoing rate</name>
+                                    <priority>WARNING</priority>
+                                    <tags>
+                                        <tag>
+                                            <tag>BizTalk Message</tag>
+                                            <value>Rate</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>e89b87d2023646dc82707316dc923c28</uuid>
+                            <name>{#INSTANCE} - Message publishing throttling state</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing throttling state&quot;]</key>
+                            <valuemap>
+                                <name>Message publishing throttling state</name>
+                            </valuemap>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>955a20a1de1141f987f6f75df22fafb9</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing throttling state&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - Message publishing throttling state</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>390f896501bf493fa75bb33a3b52c84f</uuid>
+                                    <expression>min(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing throttling state&quot;],15m)&gt;0</expression>
+                                    <name>{#INSTANCE} - Message publishing throttling state for over 15 minutes</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>c58937bdeed7425f80d32d30ed49bb56</uuid>
+                            <name>{#INSTANCE} - Message publishing throttling state duration</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing throttling state duration&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>4bc674f2c371422cae005d3cb96f9751</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing throttling state duration&quot;])&gt;{$MSG.PUBLISH.THROTTLING.TIME.WARN}</expression>
+                                    <name>{#INSTANCE} - Message publishing throttling state duration</name>
+                                    <status>DISABLED</status>
+                                    <discover>NO_DISCOVER</discover>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>fa89eb44e0a24073a1994145cb816a54</uuid>
+                            <name>{#INSTANCE} - Message publishing throttling state user override</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Message publishing throttling state user override&quot;]</key>
+                            <status>DISABLED</status>
+                            <valuemap>
+                                <name>Message publishing throttling user override</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>813e919d56444841b62c159a906d2821</uuid>
+                            <name>{#INSTANCE} - Physical memory usage</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Physical memory usage (MB)&quot;]</key>
+                            <units>MB</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>c94f0f014a634958901b5c7c8269bc02</uuid>
+                            <name>{#INSTANCE} - Process memory usage</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Process memory usage (MB)&quot;]</key>
+                            <units>MB</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>4f2ecb1b57c34e1fb607c2b4e5841af3</uuid>
+                            <name>{#INSTANCE} - Process memory usage threshold</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Process memory usage threshold (MB)&quot;]</key>
+                            <units>MB</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>dda85c8478e141538e0c756752b4bcb1</uuid>
+                            <name>{#INSTANCE} - Service class ID</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Service class ID&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>867572c3e6a243fbab00b3cb9ec073e9</uuid>
+                            <name>{#INSTANCE} - Thread count threshold</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Thread count threshold&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>9342595d928e429aa2ff8a4c738d7561</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Thread count threshold&quot;])&gt;0</expression>
+                                    <name>{#INSTANCE} - Thread count threshold</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>55d686759330467f9ee63eb27d740b9c</uuid>
+                            <name>{#INSTANCE} - Total batches committed</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Total batches committed&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>9bb3ece4d25845c4a2c98b6bf3cd659c</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Total batches committed&quot;])&gt;{$TOTAL.BATCH.COMMITED.WARN}</expression>
+                                    <name>{#INSTANCE} - Total batches committed</name>
+                                    <status>DISABLED</status>
+                                    <discover>NO_DISCOVER</discover>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>382dcc44a1b44df6a50cd4cff393e693</uuid>
+                            <name>{#INSTANCE} - Total Messages Delivered</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Total messages delivered&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>4bfe8019ac65423ba77f9425cf506e07</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Total messages delivered&quot;])&gt;{$TOTAL.MSG.DELIV.WARN}</expression>
+                                    <name>{#INSTANCE} - Total Messages Delivered</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>1f980d2d229e448496894c498227cece</uuid>
+                            <name>{#INSTANCE} - Total Messages Published</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Total messages published&quot;]</key>
+                            <status>DISABLED</status>
+                            <discover>NO_DISCOVER</discover>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>4af495e94f07409996ab5bab70e454ed</uuid>
+                                    <expression>change(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Total messages published&quot;])&gt;{$TOTAL.MSG.PUBLISH.WARN2}</expression>
+                                    <name>{#INSTANCE} - Total Messages Published</name>
+                                    <priority>INFO</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>5f826a80b5a74443a4ce26e1e1bd0bcb</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Agent({#INSTANCE})\Total messages published&quot;])&gt;{$TOTAL.MSG.PUBLISH.WARN}</expression>
+                                    <name>{#INSTANCE} - Total Messages Published</name>
+                                    <priority>WARNING</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>03cbade73c6149e48318b20ab7ce2453</uuid>
+                    <name>BizTalk Message Box General Counters</name>
+                    <key>perf_instance.discovery[BizTalk:Message Box:General Counters]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>9f96525a97b8432d8bcd27cc77d6279b</uuid>
+                            <name>{#INSTANCE} - Instances - Total Number</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Instances - Total Number&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>584981a425024c48ab5011205c1bdbe4</uuid>
+                            <name>{#INSTANCE} - MsgBox Dead Processes Cleanup (Purge Jobs)</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\MsgBox Dead Processes Cleanup (Purge Jobs)&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>26f9f421b5f74e0080fbe2724cfab7a9</uuid>
+                            <name>{#INSTANCE} - MsgBox Msg Cleanup (Purge Jobs)</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\MsgBox Msg Cleanup (Purge Jobs)&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>6353ba8c7026407182c7cb5cf72cb879</uuid>
+                            <name>{#INSTANCE} - MsgBox Msg Purge Subscriptions Job (Purge Jobs)</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\MsgBox Msg Purge Subscriptions Job (Purge Jobs)&quot;]</key>
+                            <status>DISABLED</status>
+                            <discover>NO_DISCOVER</discover>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>b1fb075103dd4b1db0f692d5260eeba6</uuid>
+                            <name>{#INSTANCE} - MsgBox Parts Cleanup (Purge Jobs)</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\MsgBox Parts Cleanup (Purge Jobs)&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>95c435aada6041af8b99514c83a8b6fa</uuid>
+                            <name>{#INSTANCE} - Spool Size</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;]</key>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>ba5102fc76534bdc9235d7533cc0f72b</uuid>
+                                    <expression>changecount(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;],1h)&gt;{$BTSPOOL.SIZE.DIFF.CRIT}</expression>
+                                    <name>Spool Size for {#INSTANCE} has grown with more than {$BTSPOOL.SIZE.DIFF.CRIT}</name>
+                                    <priority>DISASTER</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>7bab171a95e84a4f8fa0f58331c49df2</uuid>
+                                    <expression>changecount(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;],1h)&gt;{$BTSPOOL.SIZE.DIFF.HIGH}</expression>
+                                    <name>Spool Size for {#INSTANCE} has grown with more than {$BTSPOOL.SIZE.DIFF.HIGH}</name>
+                                    <priority>HIGH</priority>
+                                    <dependencies>
+                                        <dependency>
+                                            <name>Spool Size for {#INSTANCE} has grown with more than {$BTSPOOL.SIZE.DIFF.CRIT}</name>
+                                            <expression>changecount(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;],1h)&gt;{$BTSPOOL.SIZE.DIFF.CRIT}</expression>
+                                        </dependency>
+                                    </dependencies>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>ee8971cc4a2d4cf586c74e8a1397f98c</uuid>
+                                    <expression>changecount(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;],1h)&gt;{$BTSPOOL.SIZE.DIFF.WARN}</expression>
+                                    <name>Spool Size for {#INSTANCE} has grown with more than {$BTSPOOL.SIZE.DIFF.WARN}</name>
+                                    <priority>WARNING</priority>
+                                    <dependencies>
+                                        <dependency>
+                                            <name>Spool Size for {#INSTANCE} has grown with more than {$BTSPOOL.SIZE.DIFF.HIGH}</name>
+                                            <expression>changecount(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;],1h)&gt;{$BTSPOOL.SIZE.DIFF.HIGH}</expression>
+                                        </dependency>
+                                    </dependencies>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>6196d65e5a3b4d3ebc9a48725f4b6116</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;])&gt;{$BTSPOOL.SIZE.MAX.CRIT}</expression>
+                                    <name>Spool Size for {#INSTANCE} is over {$BTSPOOL.SIZE.MAX.CRIT}</name>
+                                    <priority>DISASTER</priority>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>de8a998ee5a24476b4c6a64a9f22cd95</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;])&gt;{$BTSPOOL.SIZE.MAX.HIGH}</expression>
+                                    <name>Spool Size for {#INSTANCE} is over {$BTSPOOL.SIZE.MAX.HIGH}</name>
+                                    <priority>HIGH</priority>
+                                    <dependencies>
+                                        <dependency>
+                                            <name>Spool Size for {#INSTANCE} is over {$BTSPOOL.SIZE.MAX.CRIT}</name>
+                                            <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;])&gt;{$BTSPOOL.SIZE.MAX.CRIT}</expression>
+                                        </dependency>
+                                    </dependencies>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <uuid>13f3b400c06543d3b1db731504067bc8</uuid>
+                                    <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;])&gt;{$BTSPOOL.SIZE.MAX.WARN}</expression>
+                                    <name>Spool Size for {#INSTANCE} is over {$BTSPOOL.SIZE.MAX.WARN}</name>
+                                    <priority>WARNING</priority>
+                                    <dependencies>
+                                        <dependency>
+                                            <name>Spool Size for {#INSTANCE} is over {$BTSPOOL.SIZE.MAX.HIGH}</name>
+                                            <expression>last(/Template App BizTalk Performance Counters EXP/perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Spool Size&quot;])&gt;{$BTSPOOL.SIZE.MAX.HIGH}</expression>
+                                        </dependency>
+                                    </dependencies>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>b207288e6e2541e88ed6faa55dd22abb</uuid>
+                            <name>{#INSTANCE} - Tracked Msgs Copy (Purge Jobs)</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Tracked Msgs Copy (Purge Jobs)&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>210c155d57a142c4ab24565466588540</uuid>
+                            <name>{#INSTANCE} - Tracking Data Size</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Tracking Data Size&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>bc0343bc83f248539712567660300b24</uuid>
+                            <name>{#INSTANCE} - Tracking Spool Cleanup (Purge Jobs)</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:General Counters({#INSTANCE})\Tracking Spool Cleanup (Purge Jobs)&quot;]</key>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>8d175e4c72c74139840f845ce19fda60</uuid>
+                    <name>BizTalk Message Box Host Counters</name>
+                    <key>perf_instance.discovery[BizTalk:Message Box:Host Counters]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>f3010d9d2b604570830b23a906c4ec75</uuid>
+                            <name>{#INSTANCE} - Host Queue - Instance State Msg Refs - Length</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:Host Counters({#INSTANCE})\Host Queue - Instance State Msg Refs - Length&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>74127b65bf7c47bb8f53c0908734086d</uuid>
+                            <name>{#INSTANCE} - Host Queue - Length</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:Host Counters({#INSTANCE})\Host Queue - Length&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>a3cd2ff526a94ff98519247333c7ce60</uuid>
+                            <name>{#INSTANCE} - Host Queue - Number of Instances</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:Host Counters({#INSTANCE})\Host Queue - Number of Instances&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>6138665a63814fb5b8103739b93b09a5</uuid>
+                            <name>{#INSTANCE} - Host Queue - Suspended Msgs - Length</name>
+                            <key>perf_counter[&quot;\BizTalk:Message Box:Host Counters({#INSTANCE})\Host Queue - Suspended Msgs - Length&quot;]</key>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>914cd2ba2dac4da3a3d1d749a1a07b87</uuid>
+                    <name>BizTalk Messaging Latency</name>
+                    <key>perf_instance.discovery[BizTalk:Messaging Latency]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>d86d1ab00079485a80f5b4d78a730e93</uuid>
+                            <name>{#INSTANCE} - Inbound Latency</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging Latency({#INSTANCE})\Inbound Latency (sec)&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>6ea8471bc3a44dce878814055377993a</uuid>
+                            <name>{#INSTANCE} - Outbound Adapter Latency</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging Latency({#INSTANCE})\Outbound Adapter Latency (sec)&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>acd86ee7b1d84e86ac7e480ddab462b7</uuid>
+                            <name>{#INSTANCE} - Outbound Latency</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging Latency({#INSTANCE})\Outbound Latency (sec)&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>3ecfa026cacf476da1a7e8e4dbe3e397</uuid>
+                            <name>{#INSTANCE} - Request-Response Latency</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging Latency({#INSTANCE})\Request-Response Latency (sec)&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>9cb10026274a40c98679ee6026ae9b2f</uuid>
+                    <name>BizTalk Messaging</name>
+                    <key>perf_instance.discovery[BizTalk:Messaging]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>16593c400e8d4001b441643375debc00</uuid>
+                            <name>{#INSTANCE} - Active Recieve Locations</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Active Recieve Locations&quot;]</key>
+                            <status>DISABLED</status>
+                            <discover>NO_DISCOVER</discover>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>457cad2351d648e8aea28862e9ece6c2</uuid>
+                            <name>{#INSTANCE} - Active Recieve Threads</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Active Recieve Threads&quot;]</key>
+                            <status>DISABLED</status>
+                            <discover>NO_DISCOVER</discover>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>c50323c7093c4e39b1c945c2c27532aa</uuid>
+                            <name>{#INSTANCE} - Active Send Messages</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Active Send Messages&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>39eedfd3c4ea44118862186a8badfefe</uuid>
+                            <name>{#INSTANCE} - Active Send Threads</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Active Send Threads&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>d1a7fbbe359e49c19cae85d6390aea8f</uuid>
+                            <name>{#INSTANCE} - Documents Processed</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Processed&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>705840f59bf6403486d2c59d3cf2d5f8</uuid>
+                            <name>{#INSTANCE} - Documents Processed/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Processed/Sec&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>2ffa0a1ef9034702846a13b1179b7367</uuid>
+                            <name>{#INSTANCE} - Documents Received</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Received&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>178399aa812b4b03be8c4e0fd007a137</uuid>
+                            <name>{#INSTANCE} - Documents Received/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Received/Sec&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>f9655dee7f004f28857f60d5c2b006fe</uuid>
+                            <name>{#INSTANCE} - Documents Resubmitted</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Resubmitted&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>e835c4fcd1104e44abd53513e071893b</uuid>
+                            <name>{#INSTANCE} - Documents Submitted/Batch</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Submitted/Batch&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>a0d29df828d84ba5a7807fa40a864a74</uuid>
+                            <name>{#INSTANCE} - Documents Suspended</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Suspended&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>b7e643396e1949d88f6217186e5b8e18</uuid>
+                            <name>{#INSTANCE} - Documents Suspended/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Suspended/Sec&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>f236d0cdaf844af2849a00b5e5ee83d5</uuid>
+                            <name>{#INSTANCE} - Documents Transmitted/Batch</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Documents Transmitted/Batch&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>2d9be295c70544fe916857d3eaa5812f</uuid>
+                            <name>{#INSTANCE} - ID Process</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\ID Process&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>297d1093bb01452da4f31a561d2287da</uuid>
+                            <name>{#INSTANCE} - Pending Receive Batches</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Pending Receive Batches&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>facc6b8b9abc4f41bc41a713d13d3ca0</uuid>
+                            <name>{#INSTANCE} - Pending Transmitted Messages</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Pending Transmitted Messages&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>8d0a8b0827624243bf7ef4f116a7c684</uuid>
+                            <name>{#INSTANCE} - Request/Response Timeouts</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Request/Response Timeouts&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>ce0d74be68f64a718da748d7ee776919</uuid>
+                            <name>{#INSTANCE} - Throttled Receive Batches</name>
+                            <key>perf_counter[&quot;\BizTalk:Messaging({#INSTANCE})\Throttled Receive Batches&quot;]</key>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>ff84ec428ffd406abc4693e8f1adc448</uuid>
+                    <name>BizTalk MSMQ Receive Adapter</name>
+                    <key>perf_instance.discovery[BizTalk:MSMQ Receive Adapter]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>04e8f548395e44eeb3109f0da67bde71</uuid>
+                            <name>{#INSTANCE} - Bytes Received</name>
+                            <key>perf_counter[&quot;\BizTalk:MSMQ Receive Adapter({#INSTANCE})\Bytes Received&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>ec09fe53f81047a48a2f038ce7e36958</uuid>
+                            <name>{#INSTANCE} - Bytes Received/sec</name>
+                            <key>perf_counter[&quot;\BizTalk:MSMQ Receive Adapter({#INSTANCE})\Bytes Received/sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>75b47bdfe6794f0cade51bc2a623abd0</uuid>
+                            <name>{#INSTANCE} - Messages Received</name>
+                            <key>perf_counter[&quot;\BizTalk:MSMQ Receive Adapter({#INSTANCE})\Messages Received&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>28ca37cf2ecb4f828f1a50c349ad5526</uuid>
+                            <name>{#INSTANCE} - Messages Received/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:MSMQ Receive Adapter({#INSTANCE})\Messages Received/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>2cb1ecdc2279459ba3f43755c6078a75</uuid>
+                    <name>BizTalk MSMQ Send Adapter</name>
+                    <key>perf_instance.discovery[BizTalk:MSMQ Send Adapter]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>f043d475b56a4d38aa735e9e3f8e5594</uuid>
+                            <name>{#INSTANCE} - Bytes Sent</name>
+                            <key>perf_counter[&quot;\BizTalk:MSMQ Send Adapter({#INSTANCE})\Bytes Sent&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>faafaa3489ae4fc68b41e3e1ddeb5f4c</uuid>
+                            <name>{#INSTANCE} - Bytes Sent/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:MSMQ Send Adapter({#INSTANCE})\Bytes Sent/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>32806405c8c24037b2c08c1d3fd9f9ef</uuid>
+                            <name>{#INSTANCE} - Messages Sent</name>
+                            <key>perf_counter[&quot;\BizTalk:MSMQ Send Adapter({#INSTANCE})\Messages Sent&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>832ae70f219645c7971ad7edbd30f9f6</uuid>
+                            <name>{#INSTANCE} - Messages Sent/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:MSMQ Send Adapter({#INSTANCE})\Messages Sent/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>e6df92edce6f4c62b52f3d3954b9b242</uuid>
+                    <name>BizTalk SQL Receive Adapter</name>
+                    <key>perf_instance.discovery[BizTalk:SQL Receive Adapter]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>a9f6b9838a4548aebebc1b02d8230c73</uuid>
+                            <name>{#INSTANCE} - Messages Received</name>
+                            <key>perf_counter[&quot;\BizTalk:SQL Receive Adapter({#INSTANCE})\Messages Received&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>bfbc26ce2c96448faf8752a64b661cc2</uuid>
+                            <name>{#INSTANCE} - Messages Received/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:SQL Receive Adapter({#INSTANCE})\Messages Received/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>7428069d04f14486b585bd44e57689d6</uuid>
+                    <name>BizTalk SQL Send Adapter</name>
+                    <key>perf_instance.discovery[BizTalk:SQL Send Adapter]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>cbaef6c76b1844f4823405b38485a560</uuid>
+                            <name>{#INSTANCE} - Messages Sent</name>
+                            <key>perf_counter[&quot;\BizTalk:SQL Send Adapter({#INSTANCE})\Messages Sent&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>a443183d9ffb47fabb5dbe12f28c1ec5</uuid>
+                            <name>{#INSTANCE} - Messages Sent/Sec</name>
+                            <key>perf_counter[&quot;\BizTalk:SQL Send Adapter({#INSTANCE})\Messages Sent/Sec&quot;]</key>
+                            <units>s</units>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>bb3c0406cf87459884dc388541c0287a</uuid>
+                    <name>BizTalk TDDS</name>
+                    <key>perf_instance.discovery[BizTalk:TDDS]</key>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>892a389ae8334048b0226007cb7c255f</uuid>
+                            <name>{#INSTANCE} - Batches being processed</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Batches being processed&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>ce01f134eace4e4d84ce3d95dde58085</uuid>
+                            <name>{#INSTANCE} - Batches Committed</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Batches Committed&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>716191379dc64d7fbf07b32a2a754c4c</uuid>
+                            <name>{#INSTANCE} - Events Being Processed</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Events Being Processed&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>83557cc3e8f7496189ea9f1ff03d58b3</uuid>
+                            <name>{#INSTANCE} - Events Committed</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Events Committed&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>84cf99e148bc4813bbf77c4c37b2e973</uuid>
+                            <name>{#INSTANCE} - Records Being Processed</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Records Being Processed&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>f344ca3f6b4f4d6ba978c255db0f29fa</uuid>
+                            <name>{#INSTANCE} - Records Committed</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Records Committed&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>a9587594bd444d19b33cfce7f0de38fb</uuid>
+                            <name>{#INSTANCE} - Total Batches</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Total Batches&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>5a1d225c168d4c59b816fafdcc381c11</uuid>
+                            <name>{#INSTANCE} - Total Events</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Total Events&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>2b4fabfffef44f1cb6f2dda4257bd12f</uuid>
+                            <name>{#INSTANCE} - Total Failed Batches</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Total Failed Batches&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>48081a0aa076436f81adc98b2e45f03b</uuid>
+                            <name>{#INSTANCE} - Total Failed Events</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Total Failed Events&quot;]</key>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>65b36a566ec44666a4a758fa523d94a9</uuid>
+                            <name>{#INSTANCE} - Total Records</name>
+                            <key>perf_counter[&quot;\BizTalk:TDDS({#INSTANCE})\Total Records&quot;]</key>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+                <discovery_rule>
+                    <uuid>50ca79ad6b8c430584502a0210b2e740</uuid>
+                    <name>BizTalk Process</name>
+                    <key>perf_instance.discovery[Process]</key>
+                    <filter>
+                        <conditions>
+                            <condition>
+                                <macro>{#INSTANCE}</macro>
+                                <value>BT.+</value>
+                                <formulaid>A</formulaid>
+                            </condition>
+                        </conditions>
+                    </filter>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>6c481fa4f4f9405399b8793b8eb5a090</uuid>
+                            <name>{#INSTANCE} - Processor Time</name>
+                            <key>perf_counter[&quot;\Process({#INSTANCE})\% Processor Time&quot;]</key>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                        </item_prototype>
+                    </item_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <tags>
+                <tag>
+                    <tag>BizTalk</tag>
+                </tag>
+            </tags>
+            <macros>
+                <macro>
+                    <macro>{$ACTIVE.INSTANCE.COUNT.CRIT}</macro>
+                    <value>50</value>
+                </macro>
+                <macro>
+                    <macro>{$ACTIVE.INSTANCE.COUNT.CRIT:&quot;&lt;Enter Servicetype&gt;&quot;}</macro>
+                    <value>100</value>
+                </macro>
+                <macro>
+                    <macro>{$ACTIVE.INSTANCE.COUNT.HIGH}</macro>
+                    <value>40</value>
+                </macro>
+                <macro>
+                    <macro>{$ACTIVE.INSTANCE.COUNT.HIGH:&quot;&lt;Enter Servicetype&gt;&quot;}</macro>
+                    <value>200</value>
+                </macro>
+                <macro>
+                    <macro>{$ACTIVE.INSTANCE.COUNT.WARN}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
+                    <macro>{$ACTIVE.INSTANCE.COUNT.WARN:&quot;&lt;Enter Servicetype&gt;&quot;}</macro>
+                    <value>40</value>
+                </macro>
+                <macro>
+                    <macro>{$ACTIVEINST.COUNT.WARN}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
+                    <macro>{$BTSERVICE.NAME.MATCHES}</macro>
+                    <value>^BTSSvc.+</value>
+                </macro>
+                <macro>
+                    <macro>{$BTSERVICE.NAME.NOT_MATCHES}</macro>
+                    <value>^(?:RemoteRegistry|MMCSS|gupdate|SysmonLog|clr_optimization_v.+|sppsvc|gpsvc|Pml Driver HPZ12|Net Driver HPZ12|MapsBroker|IntelAudioService|Intel\(R\) TPM Provisioning Service|dbupdate|DoSvc|CDPUserSvc_.+|WpnUserService_.+|OneSyncSvc_.+|WbioSrvc|BITS|tiledatamodelsvc|GISvc|ShellHWDetection|TrustedInstaller|TabletInputService|CDPSvc|edgeupdate|wuauserv)$</value>
+                </macro>
+                <macro>
+                    <macro>{$BTSERVICE.STARTUPNAME.MATCHES}</macro>
+                    <value>^(?:automatic|automatic delayed)$</value>
+                </macro>
+                <macro>
+                    <macro>{$BTSERVICE.STARTUPNAME.NOT_MATCHES}</macro>
+                    <value>^(?:manual|disabled)$</value>
+                </macro>
+                <macro>
+                    <macro>{$BTSPOOL.SIZE.DIFF.CRIT}</macro>
+                    <value>2000</value>
+                    <description>Growth of spool size disaster</description>
+                </macro>
+                <macro>
+                    <macro>{$BTSPOOL.SIZE.DIFF.HIGH}</macro>
+                    <value>1500</value>
+                    <description>Growth of spool size high</description>
+                </macro>
+                <macro>
+                    <macro>{$BTSPOOL.SIZE.DIFF.WARN}</macro>
+                    <value>1000</value>
+                    <description>Growth of spool size warning</description>
+                </macro>
+                <macro>
+                    <macro>{$BTSPOOL.SIZE.MAX.CRIT}</macro>
+                    <value>20000</value>
+                    <description>Max spool size disaster</description>
+                </macro>
+                <macro>
+                    <macro>{$BTSPOOL.SIZE.MAX.HIGH}</macro>
+                    <value>15000</value>
+                    <description>Max spool size high</description>
+                </macro>
+                <macro>
+                    <macro>{$BTSPOOL.SIZE.MAX.WARN}</macro>
+                    <value>12000</value>
+                    <description>Max spool size warning</description>
+                </macro>
+                <macro>
+                    <macro>{$MSG.DELIV.DELAY.WARN}</macro>
+                    <value>600ms</value>
+                </macro>
+                <macro>
+                    <macro>{$MSG.DELIV.IN.RATE.WARN}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
+                    <macro>{$MSG.DELIV.OUT.RATE.WARN}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
+                    <macro>{$MSG.DELIV.THROTTLING.TIME.WARN}</macro>
+                    <value>1.5M</value>
+                </macro>
+                <macro>
+                    <macro>{$MSG.PUBLISH.DELAY.WARN}</macro>
+                    <value>600ms</value>
+                </macro>
+                <macro>
+                    <macro>{$MSG.PUBLISH.IN.RATE.WARN}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
+                    <macro>{$MSG.PUBLISH.OUT.RATE.WARN}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
+                    <macro>{$MSG.PUBLISH.THROTTLING.TIME.WARN}</macro>
+                    <value>1.5M</value>
+                </macro>
+                <macro>
+                    <macro>{$TOTAL.BATCH.COMMITED.WARN}</macro>
+                    <value>1.5M</value>
+                </macro>
+                <macro>
+                    <macro>{$TOTAL.MSG.DELIV.WARN}</macro>
+                    <value>2M</value>
+                </macro>
+                <macro>
+                    <macro>{$TOTAL.MSG.PUBLISH.WARN}</macro>
+                    <value>1200000</value>
+                </macro>
+                <macro>
+                    <macro>{$TOTAL.MSG.PUBLISH.WARN2}</macro>
+                    <value>500</value>
+                </macro>
+            </macros>
+            <valuemaps>
+                <valuemap>
+                    <uuid>13a71cd378b84681b26a1a32b8fd05c7</uuid>
+                    <name>High database session</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Normal</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Database session count exceeds threshold</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>ff5d6433e65a41c0a395fbc4ebe2e534</uuid>
+                    <name>High database size</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Normal</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Database size has grown beyond threshold</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>53b16088ddaf4d2c82bcaa5d2650f615</uuid>
+                    <name>High in-process message count</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Normal</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>In-process message count exceeds limit</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>866084b8567445e09d2f6a87ceac8295</uuid>
+                    <name>High message delivery rate</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Normal</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Message delivery rate exceeds the message processing Rate</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>c156bbcfa6cb4000b14dbbe4913f1c38</uuid>
+                    <name>High message publishing rate</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Normal</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Publishing request rate exceeds completion rate</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>ffef0b2cbb3b4e80b5cf6426a5b4a529</uuid>
+                    <name>High process memory</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Normal</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Process memory exceeds threshold</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>856fd392848a4a98a81064dd2dba2502</uuid>
+                    <name>High system memory</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Normal</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>System memory exceeds threshold</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>fdae5a1931a84726bcf8b98b09412041</uuid>
+                    <name>High thread count</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Normal</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Thread count exceeds threshold</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>7df0ea49a8154ee7b2254cc0311f1ca7</uuid>
+                    <name>Message delivery throttling state</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Not throttling</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Imbalanced message delivery rate input rate exceeds output rate</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>3</value>
+                            <newvalue>Throttling due to high in-process message count</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>4</value>
+                            <newvalue>Throttling due to process memory pressure</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>5</value>
+                            <newvalue>Throttling due to system memory pressure</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>9</value>
+                            <newvalue>Throttling due to high thread count</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>10</value>
+                            <newvalue>Throttling due to user override on delivery</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>f74162d295fc477bb5bfbb1a21c4216e</uuid>
+                    <name>Message delivery throttling user override</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>No override</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Always throttle message delivery</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>2</value>
+                            <newvalue>Do not throttle message delivery</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>74f5816dd4f148b493e54650395e86a9</uuid>
+                    <name>Message publishing throttling state</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Not throttling</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>2</value>
+                            <newvalue>Imbalanced message publishing rate input exceeds output rate</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>4</value>
+                            <newvalue>Throttling due to process memory pressure</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>5</value>
+                            <newvalue>Throttling due to system memory pressure</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>6</value>
+                            <newvalue>Throttling due to database growth</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>8</value>
+                            <newvalue>Throttling due to high session count</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>9</value>
+                            <newvalue>Throttling due to high thread count</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>11</value>
+                            <newvalue>Throttling due to user override on publishing</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+                <valuemap>
+                    <uuid>9369197260744e058b48d26daf96cd40</uuid>
+                    <name>Message publishing throttling user override</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>No override</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Always throttle message publishing</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>2</value>
+                            <newvalue>Do not throttle message publishing</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+            </valuemaps>
+        </template>
+    </templates>
+</zabbix_export>
