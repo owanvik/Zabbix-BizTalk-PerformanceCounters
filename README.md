@@ -13,5 +13,6 @@ To use this you create a new macro like ```{$ACTIVE.INSTANCE.COUNT.CRIT:"MyBT.Ho
 Known issues:
 - Performance counters sometimes report no data, giving you blank spots in graphs
 - Message counts have no purpose in this template
+- To remove some sensitive information, i made a full copy of the Template on export, that's why the name ends with EXP
 
 
