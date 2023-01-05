@@ -2,6 +2,7 @@
 BizTalk Performance Counters template for Zabbix
 
 This template discovers all performance counters for BizTalk and creates items and triggers for them using LLD.
+
 The Template is based on this https://github.com/GPegel/Zabbix-App-Biztalk, but made to use LLD.
 
 Some of the macros are "User macro with context" which you can read about here:
