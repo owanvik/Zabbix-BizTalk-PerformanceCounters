@@ -10,3 +10,8 @@ Example: {$ACTIVE.INSTANCE.COUNT.CRIT:"MyBT.HostInstance"}
 This will override the default {$ACTIVE.INSTANCE.COUNT.CRIT} macro for "MyBT.HostInstance".
 To use this you create a new macro like {$ACTIVE.INSTANCE.COUNT.CRIT:"MyBT.HostInstance"} and replace "MyBT.HostInstance" with the host name of your host instance.
 
+Known issues:
+- Performance counters sometimes report no data, giving you blank spots in graphs
+- Message counts have no purpose in this template
+
+
